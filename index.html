@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Илья & Анна</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<section class="screen" id="screen1">
+
+<img class="bg" src="img/backgrounds/background1.png" alt="">
+.bg {
+    filter: url(#fabricWind);
+}
+<svg class="fabric-filter">
+  <filter id="fabricWind">
+   
+
+<img class="photo fade-in" src="img/photos/photo1.png" alt="">
+
+<img class="flower fade-in" src="img/icons/flower1.png" alt="">
+
+<img class="pearls fade-in" src="img/icons/pearls1.png" alt="">
+    <div class="logo fade-in">I & A</div>
+
+    <div class="top-date fade-in">11.09.2026</div>
+
+    <div class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="content fade-in">
+
+        <h1>Илья</h1>
+
+        <div class="amp">&</div>
+
+        <h1>Анна</h1>
+
+        <div class="line"></div>
+
+        <div class="date">
+            11 сентября 2026
+        </div>
+
+        <p>
+            Мы будем счастливы,<br>
+            если вы разделите<br>
+            с нами этот день.
+        </p>
+
+        <div class="scroll-line">
+            <div class="glow"></div>
+        </div>
+
+        <div class="scroll-text">
+            ЛИСТАЙТЕ ВНИЗ
+        </div>
+
+    </div>
+
+    <button class="music-button" id="musicButton">
+
+    <img
+        src="img/icons/music-button-off.png"
+        alt="Музыка">
+
+</button>
+<audio id="bgMusic" loop>
+
+    <source src="audio/audio.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<audio id="glassSound">
+
+    <source src="audio/glass.mp3" type="audio/mpeg">
+
+</audio>
+<audio id="glassSendSound" src="audio/glass.mp3"></audio>
+</section>
+
+
+
+<section class="screen second">
+
+    <img src="img/backgrounds/background2.png" class="bg" alt="">
+
+    <img src="img/photos/photo2.png" class="story-photo fade-in" alt="">
+
+    <img src="img/photos/photo3.png" class="story-polaroid fade-in" alt="">
+
+    <img src="img/icons/flower2.png" class="story-flower fade-in" alt="">
+
+    <img src="img/icons/pearls2.png" class="story-pearls fade-in" alt="">
+
+
+    <div class="story-top">
+        <span>02</span>
+        <span>OUR STORY</span>
+    </div>
+
+
+    <div class="story-text fade-in">
+        <p>
+            Каждая<br>
+            история любви<br>
+            начинается<br>
+            по-разному.
+            <br><br>
+            Наша привела<br>
+            нас сюда.
+        </p>
+    </div>
+
+</section>
+
+<section class="screen screen3">
+
+    <img class="screen3-bg" src="img/backgrounds/screen3-bg.png" alt="">
+
+    <img class="screen3-flower fade-in" src="img/icons/screen3-flower.png" alt="">
+
+    <img class="screen3-pearl1 fade-in" src="img/icons/screen3-pearl1.png" alt="">
+    <img class="screen3-pearl2 fade-in" src="img/icons/screen3-pearl2.png" alt="">
+    <img class="screen3-pearl3 fade-in" src="img/icons/screen3-pearl3.png" alt="">
+
+    <img class="screen3-glass fade-in" src="img/icons/screen3-glass.png" alt="">
+
+
+    <div class="screen3-title fade-in">
+    <span>03</span>
+    <span>SAVE THE DATE</span>
+</div>
+
+
+    <div class="screen3-date fade-in">
+        <div>11</div>
+        <span>/</span>
+        <div>09</div>
+        <span>/</span>
+        <div>2026</div>
+    </div>
+
+
+    <div class="screen3-line fade-in"></div>
+
+
+    <div class="screen3-subtitle fade-in">
+        До нашей встречи осталось
+    </div>
+
+
+    <div class="counter fade-in">
+
+        <div>
+            <b>65</b>
+            <span>ДНЕЙ</span>
+        </div>
+
+        <div>
+            <b>12</b>
+            <span>ЧАСОВ</span>
+        </div>
+
+        <div>
+            <b>48</b>
+            <span>МИНУТ</span>
+        </div>
+
+        <div>
+            <b>33</b>
+            <span>СЕКУНД</span>
+        </div>
+
+    </div>
+
+</section>
+
+ <section class="screen screen4">
+
+    <img class="screen4-location fade-in" src="img/photos/screen4-location.png" alt="">
+
+    <img class="screen4-flower fade-in" src="img/icons/screen4-flower.png" alt="">
+    
+    <div class="screen4-title fade-in">
+        <span>04</span>
+        <span>LOCATION</span>
+    </div>
+
+
+    <div class="location-name fade-in">
+        Prostranstvo Monrashe
+    </div>
+
+
+    <div class="location-city fade-in">
+        Краснодар
+        <br>
+        ул. Зиповская, 5В
+    </div>
+
+
+    <div class="map-button" id="routeButton">
+
+    <img src="img/icons/screen4-button.png" alt="">
+
+    <span>ПОСТРОИТЬ МАРШРУТ</span>
+
+</div>
+
+
+    <img class="map-icon fade-in" src="img/icons/screen4-map.png" alt="">
+
+
+    <div class="map-text fade-in">
+        откроется карта
+    </div>
+
+
+</section>
+ 
+
+<section class="screen screen5">
+
+<img class="screen5-flower"
+     src="img/icons/screen5-flower.png"
+     alt="">
+
+    <img class="screen5-color1" src="img/photos/screen5-color1.png" alt="">
+    <img class="screen5-color2" src="img/photos/screen5-color2.png" alt="">
+    <img class="screen5-color3" src="img/photos/screen5-color3.png" alt="">
+    <img class="screen5-color4" src="img/photos/screen5-color4.png" alt="">
+    <img class="screen5-color5" src="img/photos/screen5-color5.png" alt="">
+    <img class="screen5-color6" src="img/photos/screen5-color6.png" alt="">
+
+  
+    <div class="screen5-title">
+        <span>05</span>
+        <span>DRESS CODE</span>
+    </div>
+
+    <div class="dress-title">
+        DRESS CODE
+    </div>
+
+    <div class="dress-text">
+        Спокойные природные оттенки<br>
+        будут прекрасным дополнением<br>
+        к атмосфере нашего дня.
+    </div>
+
+    <div class="color-name color1">Бежевый</div>
+    <div class="color-name color2">Молочный</div>
+    <div class="color-name color3">Светлый беж</div>
+    <div class="color-name color4">Песочный</div>
+    <div class="color-name color5">Теплый оливковый</div>
+    <div class="color-name color6">Шоколадный</div>
+
+</section>
+
+<section class="screen screen6">
+
+
+    <!-- фон -->
+
+    <img class="screen6-bg"
+         src="img/backgrounds/screen6-bg.png"
+         alt="">
+
+
+    <!-- рамка -->
+
+    <img class="screen6-frame fade-in"
+         src="img/icons/screen6-frame.png"
+         alt="">
+
+
+    <!-- цветы -->
+
+    <img class="screen6-flower-small fade-in"
+         src="img/icons/screen6-flower-small.png"
+         alt="">
+
+
+    <img class="screen6-pearl fade-in"
+         src="img/icons/screen6-pearl.png"
+         alt="">
+
+
+    <img class="screen6-flower-big fade-in"
+         src="img/icons/screen6-flower-big.png"
+         alt="">
+
+
+
+    <!-- верхняя надпись -->
+
+    <div class="screen6-number fade-in">
+    <span>06</span>
+    <span>RSVP</span>
+</div>
+
+
+
+    <!-- форма -->
+
+    <div class="rsvp-card fade-in">
+
+
+        <div class="rsvp-title">
+
+            Пожалуйста,<br>
+            подтвердите<br>
+            присутствие<br>
+            до 21 августа 2026
+
+        </div>
+
+
+
+        <label>
+            ИМЯ ГОСТЯ
+        </label>
+
+
+        <input id="guestName"
+type="text"
+placeholder="Введите ваше имя">
+
+
+
+        <label>
+            БУДУ ЛИ Я ПРИСУТСТВОВАТЬ
+        </label>
+
+
+        <div class="radio active" data-answer="Буду с радостью">
+
+            <span class="circle active"></span>
+
+            Буду с радостью
+
+        </div>
+
+
+
+        <div class="radio" data-answer="К сожалению, не смогу">
+
+            <span class="circle"></span>
+
+            К сожалению, не смогу
+
+        </div>
+
+
+
+
+        <label>
+            КОММЕНТАРИЙ
+        </label>
+<textarea id="guestComment"
+placeholder="Напишите нам несколько слов..."></textarea>
+
+      <div class="send-button" id="sendButton">
+
+    <img src="img/icons/screen6-button.png" alt="">
+
+    <span>ОТПРАВИТЬ</span>
+
+</div>
+
+
+    </div>
+
+
+</section>
+
+<section class="screen screen7">
+
+    <!-- общий заголовок как на других слайдах -->
+    <div class="screen-header fade-in">
+        <span>07</span>
+        <span>ПРОГРАММА</span>
+    </div>
+
+
+    <!-- ткань -->
+    <img class="screen7-fabric"
+         src="img/icons/screen7-fabric.png"
+         alt="">
+
+
+    <!-- жемчужина -->
+    <img class="screen7-pearl fade-in"
+         src="img/icons/screen7-pearl.png"
+         alt="">
+
+
+
+    <div class="timeline fade-in">
+
+    <div class="timeline-dot top"></div>
+
+    <div class="timeline-line line1"></div>
+    <div class="timeline-line line2"></div>
+    <div class="timeline-line line3"></div>
+    <div class="timeline-line line4"></div>
+    <div class="timeline-line line5"></div>
+
+    <div class="timeline-dot bottom"></div>
+
+    <!-- дальше идут item1 item2 item3 item4 -->
+
+</div>
+
+
+        <div class="timeline-item item1 fade-in">
+
+            <div class="timeline-time">
+                17:00
+            </div>
+
+
+           <img class="timeline-icon" src="img/icons/branch.png" alt="">
+
+            <div class="timeline-text">
+
+                <div class="timeline-heading">
+                    СБОР ГОСТЕЙ
+                </div>
+
+                <div class="timeline-description">
+                    Начинаем с фуршета
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- 18:00 -->
+
+        <div class="timeline-item item2 fade-in">
+
+            <div class="timeline-time">
+                18:00
+            </div>
+
+
+            <img class="timeline-icon" src="img/icons/cheers.png" alt="">
+
+
+            <div class="timeline-text">
+
+                <div class="timeline-heading">
+                    БАНКЕТ
+                </div>
+
+                <div class="timeline-description">
+                    Праздничный ужин
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- 21:00 -->
+
+        <div class="timeline-item item3 fade-in">
+
+            <div class="timeline-time">
+                21:00
+            </div>
+
+
+            <img class="timeline-icon" src="img/icons/cake.png" alt="">
+
+
+            <div class="timeline-text">
+
+                <div class="timeline-heading">
+                    ТОРТ
+                </div>
+
+                <div class="timeline-description">
+                    Сладкое завершение вечера
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- 22:00 -->
+
+        <div class="timeline-item item4 fade-in">
+
+            <div class="timeline-time">
+                22:00
+            </div>
+
+
+            <img class="timeline-icon" src="img/icons/disco.png" alt="">
+
+
+            <div class="timeline-text">
+
+                <div class="timeline-heading">
+                    ТАНЦЫ
+                </div>
+
+                <div class="timeline-description">
+                    Вечеринка до утра
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</section>
+
+
+
+
+<section class="screen screen8">
+
+
+    <!-- HEADER -->
+
+    <div class="screen-header">
+
+        <span>08</span>
+        <span>WISHES</span>
+
+    </div>
+
+
+
+
+
+    <!-- FABRIC -->
+
+    <img class="screen8-fabric"
+         src="img/icons/screen8-fabric.png"
+         alt="">
+
+
+
+
+
+
+    <!-- DECOR -->
+
+    <img class="screen8-flower-left"
+         src="img/icons/screen8-flower-left.png"
+         alt="">
+
+
+    <img class="screen8-flower-right"
+         src="img/icons/screen8-flower-right.png"
+         alt="">
+
+
+
+    <img class="screen8-pearl1"
+         src="img/icons/screen8-pearl1.png"
+         alt="">
+
+
+    <img class="screen8-pearl2"
+         src="img/icons/screen8-pearl2.png"
+         alt="">
+
+
+    <img class="screen8-pearl3"
+         src="img/icons/screen8-pearl3.png"
+         alt="">
+
+
+
+
+
+
+
+    <!-- MAIN BIG GLASS CARD -->
+
+    <div class="screen8-main-card">
+
+
+        <img class="screen8-contacts-card"
+             src="img/icons/screen8-contacts-card.png"
+             alt="">
+
+
+
+
+
+
+        <div class="screen8-main-content">
+
+
+
+            <div class="screen8-title fade-in">
+
+                Ваше присутствие —
+                <br>
+                самый ценный подарок для нас.
+
+
+            </div>
+
+
+
+            <!-- FLOWERS BLOCK -->
+
+
+            <!-- =========================
+         ВМЕСТО ЦВЕТОВ
+========================= -->
+
+<div class="wish-block flowers fade-in">
+
+    <img class="wish-icon-bottle"
+         src="img/icons/bottle.png"
+         alt="">
+
+    <div class="wish-text">
+
+        <div class="wish-heading">
+            Вместо цветов
+        </div>
+
+        <div class="wish-description">
+            Мы будем рады, если вместо букетов
+            <br>
+            вы подарите бутылочку любимого напитка.
+            <br>
+            Так наша семейная коллекция станет частью
+            <br>
+            воспоминаний о каждом из вас.
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="wish-divider"></div>
+
+
+
+<!-- =========================
+            ЛОТЕРЕЯ
+========================= -->
+
+<div class="wish-block lottery fade-in">
+
+    <img class="wish-icon-ticket"
+         src="img/icons/ticket.png"
+         alt="">
+
+    <div class="wish-text">
+
+        <div class="wish-heading">
+            Лотерея
+        </div>
+
+        <div class="wish-description">
+
+            Просим каждого гостя приобрести
+            <br>
+            любой лотерейный билет.
+            <br>
+            ("Русское Лото", "Мечталлион", или любой другой).
+            <br>
+
+            <br>
+            Будет необходимо оформить на имя и номер 
+            <br>
+            телефона молодожёнов.
+<br>
+            Во время праздника мы проведём розыгрыш
+            <br>
+             среди всех подаренных билетов
+             <br>
+             (напишите ручкой на билете свой номер телефона).
+             <br>
+             Контактные данные для оформления билета
+             <br>
+             доступны по кнопке ниже.
+
+        </div>
+
+    </div>
+
+</div>
+
+
+           <!-- GLASS BUTTON -->
+
+<button 
+    type="button"
+    class="screen8-button"
+    id="contactsButton">
+   
+
+    <img src="img/icons/screen8-glass-card.png"
+         alt="">
+
+    <span>
+        КОНТАКТЫ
+    </span>
+
+</button>
+
+
+        </div>
+
+
+    </div>
+
+
+<div class="contacts-popup" id="contactsPopup">
+
+    <div class="contacts-popup-content">
+
+        <button class="contacts-close" id="contactsClose">
+            ✕
+        </button>
+
+        <h3>Контакты для оформления билета</h3>
+
+        <div class="contact-item">
+            <div class="contact-name">Илья</div>
+            <a href="tel:+79999999999">+7 (918) 045-53-10</a>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-name">Анна</div>
+            <a href="tel:+79999999999">+7 (918) 114-39-25</a>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="screen screen9">
+
+    <!-- HEADER -->
+
+    <div class="screen-header fade-in">
+
+        <span>09</span>
+        <span>THE END</span>
+
+    </div>
+
+    <img class="screen9-photo"
+    src="img/final-photo.jpg"
+    alt="">
+
+</section>
+<script src="js/main.js"></script>
+</body>
+</html>
