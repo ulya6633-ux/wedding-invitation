@@ -76,12 +76,32 @@ body{
 
 /* ---------- ЖЕМЧУГ ---------- */
 
-.pearls{
+.screen1-pearl1,
+.screen1-pearl2,
+.screen1-pearl3{
     position:absolute;
-    left:-9%;
-    bottom:3%;
-    width:90%;
-    z-index:3
+    z-index:4;
+    transform-origin:center center;
+    will-change:transform;
+}
+
+
+.screen1-pearl1{
+    left:15px;
+    top:610px;
+    width:30px;
+}
+
+.screen1-pearl2{
+    left:40px;
+    top:680px;
+    width:40px;
+}
+
+.screen1-pearl3{
+    right:350px;
+    top:630px;
+    width:50px;
 }
 
 /* ---------- ВЕРХ ---------- */
@@ -199,22 +219,107 @@ body{
 .scroll-line{
     width:1px;
     height:80px;
-    background:rgba(255,255,255,.55);
+    background:rgba(255,255,255,.35);
     margin:7px auto 18px;
     position:relative;
+    overflow:visible;
 }
+
+
+/* свет внутри линии */
+
+.scroll-line::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:-40px;
+
+    width:100%;
+    height:35px;
+
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        white,
+        transparent
+    );
+
+    animation:lineMove 4s linear infinite;
+
+}
+
+
+
+@keyframes lineMove{
+
+    0%{
+        top:-30px;
+    }
+
+    70%{
+        top:55px;
+    }
+
+    100%{
+        top:55px;
+    }
+
+}
+
+
 
 .glow{
     position:absolute;
-    left:40%;
-    bottom:-2px;
+
+    left:50%;
+    bottom:-4px;
+
     transform:translateX(-50%);
+
     width:8px;
     height:8px;
+
     border-radius:50%;
+
     background:#fff;
-    box-shadow:0 0 5px rgba(255,255,255,.8);
+
+    box-shadow:
+    0 0 8px white,
+    0 0 20px white;
+
+    z-index:10;
 }
+
+
+@keyframes dotGlow{
+
+0%,70%{
+    box-shadow:
+    0 0 5px white;
+}
+
+
+85%{
+    box-shadow:
+    0 0 15px white,
+    0 0 35px white;
+}
+
+
+100%{
+    box-shadow:
+    0 0 50px white;
+}
+
+}
+
+
+
+
+
 
 .scroll-text{
     position:relative;
@@ -307,18 +412,41 @@ mask-image: radial-gradient(
     right:-121px;
     top:-231px;
     height:980px;
+   
+  
     z-index:4;
+   
+
 }
 
 
 /* жемчуг */
 
-.story-pearls{
+.screen2-pearl1,
+.screen2-pearl2,
+.screen2-pearl3{
     position:absolute;
-    left:-50px;
-    bottom:-70px;
-    width:550px;
     z-index:4;
+    transform-origin:center center;
+}
+
+
+.screen2-pearl1{
+    left:-6px;
+    top:650px;
+    width:30px;
+}
+
+.screen2-pearl2{
+    left:10px;
+    top:670px;
+    width:40px;
+}
+
+.screen2-pearl3{
+    right:350px;
+    top:700px;
+    width:50px;
 }
 
 /* текст */
@@ -378,25 +506,25 @@ mask-image: radial-gradient(
 
 .screen3-pearl1{
     position:absolute;
-    left:-25px;
-    top:120px;
-    width:400px;
+    left:50px;
+    top:470px;
+    width:40px;
     z-index:4;
 }
 
 .screen3-pearl2{
     position:absolute;
-    left:-90px;
-    top:80px;
-    width:510px;
+    left:20px;
+    top:520px;
+    width:50px;
     z-index:4;
 }
 
 .screen3-pearl3{
     position:absolute;
-    left:-10px;
-    top:320px;
-    width:300px;
+    left:50px;
+    top:580px;
+    width:30px;
     z-index:4;
 }
 
@@ -405,13 +533,21 @@ mask-image: radial-gradient(
 
 .screen3-glass{
     position:absolute;
-    right:-90px;
-    bottom:-150px;
-    width:500px;
+    right:10px;
+    bottom:80px;
+    width:60px;
     z-index:3;
     
 }
+.screen3-pearl1,
+.screen3-pearl2,
+.screen3-pearl3
+.screen3-glass{
 
+    transform-origin:center center;
+    will-change:transform;
+
+}
 
 /* верх */
 
@@ -1018,17 +1154,12 @@ height:calc(70% + 1px);
 /* жемчужина */
 
 .screen6-pearl{
-
     position:absolute;
-
-    left:-20px;
-
-    bottom:50px;
-
-    width:400px;
-
-    z-index:5;
-
+    width:30px;
+    left:10px;
+    top:750px;
+    z-index:4;
+    transform-origin:center center;
 }
 
 
@@ -1356,7 +1487,7 @@ height:calc(70% + 1px);
     overflow:hidden;
 
     background:#F5F1EB;
-
+    
 }
 
 
@@ -1367,7 +1498,7 @@ height:calc(70% + 1px);
 
     position:absolute;
 
-    bottom:45px;
+    bottom:20px;
     left:0;
 
     width:430px;
@@ -1381,16 +1512,12 @@ height:calc(70% + 1px);
 /* жемчужина */
 
 .screen7-pearl{
-
     position:absolute;
-
-    bottom:46px;
-    left:10px;
-
-    width:400px;
-
-    z-index:3;
-
+    width:40px;
+    right:210px;
+    top:760px;
+    z-index:4;
+    transform-origin:center center;
 }
 
 .screen-header{
@@ -1426,11 +1553,14 @@ height:calc(70% + 1px);
 
 .timeline{
     position:absolute;
-    top:160px;
+    top:156px;
     left:0;
     width:430px;
     height:560px;
+    
 }
+
+
 
 
 /* ---------- точки ---------- */
@@ -1449,7 +1579,7 @@ height:calc(70% + 1px);
 }
 
 .timeline-dot.bottom{
-    top:420.1px;
+    top:518.1px;
 }
 
 
@@ -1460,6 +1590,7 @@ height:calc(70% + 1px);
     left:214px;
     width:1px;
     background:#B8AAA0;
+   
 }
 
 .line1{
@@ -1486,6 +1617,10 @@ height:calc(70% + 1px);
     top:370px;
     height:50px;
 }
+.line6{
+    top: 468px;
+     height:50px;
+}
 
 
 /* ---------- элементы ---------- */
@@ -1511,8 +1646,17 @@ height:calc(70% + 1px);
 .item4{
     top:372px;
 }
+.item5{
+    top: 470px;
+}
 
 
+.item5 img{
+    width: 30px;px;
+    left: 198px;
+    height:auto;
+   
+}
 /* ---------- время ---------- */
 
 .timeline-time{
@@ -1525,7 +1669,7 @@ height:calc(70% + 1px);
 
     text-align:right;
 
-    top:120px;
+    top:115px;
 
     font-family:'Cormorant Infant';
 
@@ -1544,7 +1688,7 @@ height:calc(70% + 1px);
 
     left:200px;
 
-    top:117px;
+    top:114px;
 
     width:28px;
 
@@ -1563,7 +1707,7 @@ height:calc(70% + 1px);
 
     left:270px;
 
-    top:120px;
+    top:115px;
 
     width:135px;
 
@@ -1654,61 +1798,37 @@ height:calc(70% + 1px);
 }
 
 
-
-
-
 /* =========================
         ЖЕМЧУГ
 ========================= */
 
 
-.screen8-pearl1{
-
+.screen8-pearl1,
+.screen8-pearl2,
+.screen8-pearl3{
     position:absolute;
-
-    width:450px;
-
-    left:15px;
-
-    top:210px;
-
-    z-index:2;
-
+    z-index:4;
+    transform-origin:center center;
 }
 
+
+.screen8-pearl1{
+    left:50px;
+    top:690px;
+    width:30px;
+}
 
 .screen8-pearl2{
-
-    position:absolute;
-
-    width:300px;
-
-    right:130px;
-
-    top:335px;
-
-    z-index:2;
-
+    left:78px;
+    top:670px;
+    width:40px;
 }
-
 
 .screen8-pearl3{
-
-    position:absolute;
-
-    width:200px;
-
-    right:210px;
-
-    bottom:140px;
-
-    z-index:2;
-
+    right:370px;
+    top:650px;
+    width:50px;
 }
-
-
-
-
 
 
 /* =========================
@@ -2275,4 +2395,88 @@ z-index:10;
 
 .fade-in.visible {
     opacity:1;
+}
+
+
+
+
+
+.fabric-filter {
+    display: none;
+}
+
+
+.bg {
+    animation: fabricMove 10s ease-in-out infinite alternate;
+}
+
+
+@keyframes fabricMove {
+
+    0% {
+        transform:  translate(0,0);
+    }
+
+    25% {
+        transform: scale(1.04) translate(-1%, 0.5%);
+    }
+
+    50% {
+        transform: scale(1.05) translate(0, -1%);
+    }
+
+    75% {
+        transform: scale(1.04) translate(1%, 0.5%);
+    }
+
+    100% {
+        transform: scale(1.05) translate(0,0);
+    }
+
+}
+
+
+.second {
+}
+
+.screen3-bg {
+    animation: fabricMove 10s ease-in-out infinite alternate;
+}
+
+.screen6-bg {
+    animation: fabricMove 10s ease-in-out infinite alternate;
+}
+
+.screen8-fabric {
+    animation: fabricMove 7s ease-in-out infinite alternate;
+}
+
+
+
+
+.screen img[class*="flower"]{
+    transform-origin:center bottom;
+    animation: flowerBreath 3s ease-in-out infinite;
+}
+
+
+@keyframes flowerBreath{
+
+    0%,100%{
+        transform:skewX(0deg);
+    }
+
+    50%{
+        transform:skewX(0.4deg);
+    }
+
+}
+
+
+
+
+.screen2-pearl1,
+.screen2-pearl2,
+.screen2-pearl3{
+    transition:none;
 }
