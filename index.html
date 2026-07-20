@@ -15,23 +15,23 @@
 
 </head>
 
+
 <body>
 
 <section class="screen" id="screen1">
 
 <img class="bg" src="img/backgrounds/background1.png" alt="">
-.bg {
-    filter: url(#fabricWind);
-}
-<svg class="fabric-filter">
-  <filter id="fabricWind">
    
-
 <img class="photo fade-in" src="img/photos/photo1.png" alt="">
 
 <img class="flower fade-in" src="img/icons/flower1.png" alt="">
 
-<img class="pearls fade-in" src="img/icons/pearls1.png" alt="">
+<img class="screen1-pearl1" src="img/icons/pearl.png">
+<img class="screen1-pearl2" src="img/icons/pearl.png">
+<img class="screen1-pearl3" src="img/icons/pearl.png">
+
+
+
     <div class="logo fade-in">I & A</div>
 
     <div class="top-date fade-in">11.09.2026</div>
@@ -106,7 +106,9 @@
 
     <img src="img/icons/flower2.png" class="story-flower fade-in" alt="">
 
-    <img src="img/icons/pearls2.png" class="story-pearls fade-in" alt="">
+    <img class="screen2-pearl1" src="img/icons/pearl.png">
+<img class="screen2-pearl2" src="img/icons/pearl.png">
+<img class="screen2-pearl3" src="img/icons/pearl.png">
 
 
     <div class="story-top">
@@ -204,7 +206,7 @@
 
 
     <div class="location-name fade-in">
-        Prostranstvo Monrashe
+        Пространство Monrashe
     </div>
 
 
@@ -297,10 +299,7 @@
          alt="">
 
 
-    <img class="screen6-pearl fade-in"
-         src="img/icons/screen6-pearl.png"
-         alt="">
-
+    <img class="screen6-pearl" src="img/icons/pearl.png" alt="">
 
     <img class="screen6-flower-big fade-in"
          src="img/icons/screen6-flower-big.png"
@@ -390,6 +389,10 @@ placeholder="Напишите нам несколько слов..."></textarea>
 
 </section>
 
+
+
+
+
 <section class="screen screen7">
 
     <!-- общий заголовок как на других слайдах -->
@@ -406,9 +409,7 @@ placeholder="Напишите нам несколько слов..."></textarea>
 
 
     <!-- жемчужина -->
-    <img class="screen7-pearl fade-in"
-         src="img/icons/screen7-pearl.png"
-         alt="">
+   <img class="screen7-pearl" src="img/icons/pearl.png">
 
 
 
@@ -421,12 +422,12 @@ placeholder="Напишите нам несколько слов..."></textarea>
     <div class="timeline-line line3"></div>
     <div class="timeline-line line4"></div>
     <div class="timeline-line line5"></div>
-
+<div class="timeline-line line6"></div>
     <div class="timeline-dot bottom"></div>
 
     <!-- дальше идут item1 item2 item3 item4 -->
-
 </div>
+
 
 
         <div class="timeline-item item1 fade-in">
@@ -537,7 +538,7 @@ placeholder="Напишите нам несколько слов..."></textarea>
                 </div>
 
                 <div class="timeline-description">
-                    Вечеринка до утра
+                    Вечеринка 
                 </div>
 
             </div>
@@ -545,8 +546,32 @@ placeholder="Напишите нам несколько слов..."></textarea>
         </div>
 
 
+    <!-- 23:00 -->
+
+<div class="timeline-item item5 fade-in">
+
+    <div class="timeline-time">
+        23:00
+    </div>
+
+
+    <img class="timeline-icon" src="img/icons/end.png" alt="">
+
+
+    <div class="timeline-text">
+
+        <div class="timeline-heading">
+            ЗАВЕРШЕНИЕ ВЕЧЕРА
+        </div>
+
+        <div class="timeline-description">
+            Провожаем этот день<br>
+            с теплом в сердце
+        </div>
 
     </div>
+
+</div>
 
 </section>
 
@@ -593,19 +618,9 @@ placeholder="Напишите нам несколько слов..."></textarea>
 
 
 
-    <img class="screen8-pearl1"
-         src="img/icons/screen8-pearl1.png"
-         alt="">
-
-
-    <img class="screen8-pearl2"
-         src="img/icons/screen8-pearl2.png"
-         alt="">
-
-
-    <img class="screen8-pearl3"
-         src="img/icons/screen8-pearl3.png"
-         alt="">
+    <img class="screen8-pearl1" src="img/icons/pearl.png">
+<img class="screen8-pearl2" src="img/icons/pearl.png">
+<img class="screen8-pearl3" src="img/icons/pearl.png">
 
 
 
@@ -707,19 +722,18 @@ placeholder="Напишите нам несколько слов..."></textarea>
             <br>
 
             <br>
-            Будет необходимо оформить на имя и номер 
+            Билет, пожалуйста, оформите на имя и номер
             <br>
             телефона молодожёнов.
 <br>
-            Во время праздника мы проведём розыгрыш
+            На самом билете напишите ручкой
             <br>
-             среди всех подаренных билетов
+             свой номер телефона - 
              <br>
-             (напишите ручкой на билете свой номер телефона).
+             он будет участвовать в нашем 
              <br>
-             Контактные данные для оформления билета
-             <br>
-             доступны по кнопке ниже.
+             праздничном розыгрыше.
+             
 
         </div>
 
@@ -799,5 +813,27 @@ placeholder="Напишите нам несколько слов..."></textarea>
 
 </section>
 <script src="js/main.js"></script>
+
+<svg class="fabric-filter" width="0" height="0">
+    <filter id="fabricWind">
+
+       <feTurbulence
+    type="fractalNoise"
+    baseFrequency="0.008"
+    numOctaves="2"
+    seed="4"
+    result="noise">
+
+    
+</feTurbulence>
+        <feDisplacementMap
+            in="SourceGraphic"
+            in2="noise"
+            scale="12"
+            xChannelSelector="R"
+            yChannelSelector="G"/>
+
+    </filter>
+</svg>
 </body>
 </html>
