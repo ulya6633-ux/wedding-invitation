@@ -245,11 +245,13 @@ if(rsvpButton){
 
     rsvpButton.addEventListener("click", ()=>{
 
+        rsvpButton.style.pointerEvents = "none";
+        rsvpButton.style.opacity = "0.5";
+
 
         const name = document.getElementById("guestName").value;
 
         const comment = document.getElementById("guestComment").value;
-
 
         const activeRadio = document.querySelector(".radio.active");
 
@@ -278,11 +280,11 @@ if(rsvpButton){
 
         .then(() => {
 
-    alert("Спасибо! Ваш ответ отправлен")
+    alert("Спасибо, что разделите с нами этот особенный день 🤍\n\nИлья & Анна")
 })
 .catch(() => {
 
-    alert("Спасибо! Ваш ответ отправлен")
+    alert("Спасибо, что разделите с нами этот особенный день 🤍\n\nИлья & Анна")
 
 });
 
@@ -406,3 +408,325 @@ const fadeObserver = new IntersectionObserver((entries)=>{
 fadeElements.forEach(item=>{
     fadeObserver.observe(item);
 });
+
+
+
+
+
+
+
+
+
+const s1pearl1 = document.querySelector('.screen1-pearl1');
+const s1pearl2 = document.querySelector('.screen1-pearl2');
+const s1pearl3 = document.querySelector('.screen1-pearl3');
+
+
+if(screen1){
+
+window.addEventListener('scroll',()=>{
+
+let rect = screen1.getBoundingClientRect();
+
+let move = Math.max(0, -rect.top);
+
+
+if(s1pearl1){
+
+s1pearl1.style.transform =
+`
+translate(${move*0.18}px, ${move}px)
+rotate(${move*1}deg)
+`;
+
+}
+
+
+if(s1pearl2){
+
+s1pearl2.style.transform =
+`
+translate(${-move*0.38}px, ${move*1.2}px)
+rotate(${-move*1}deg)
+`;
+
+}
+
+
+if(s1pearl3){
+
+s1pearl3.style.transform =
+`
+translate(${move*0.5}px, ${move*0.8}px)
+rotate(${move*2}deg)
+`;
+
+}
+
+
+});
+
+}
+
+
+
+
+
+
+
+
+const pearl1 = document.querySelector('.screen3-pearl1');
+const pearl2 = document.querySelector('.screen3-pearl2');
+const pearl3 = document.querySelector('.screen3-pearl3');
+const glass = document.querySelector('.screen3-glass');
+
+
+window.addEventListener('scroll', () => {
+
+    const screen3 = document.querySelector('.screen3');
+    const rect = screen3.getBoundingClientRect();
+
+    let move = Math.max(0, -rect.top);
+
+
+    pearl1.style.transform = `
+        translate(${move * 0.18}px, ${move*1.2}px)
+        rotate(${move * 2}deg)
+    `;
+
+
+    pearl2.style.transform = `
+        translate(${move * 0.37}px, ${move * 1.4}px)
+        rotate(${-move * 2}deg)
+    `;
+
+
+    pearl3.style.transform = `
+        translate(${move * 0.5}px, ${move}px)
+        rotate(${move * 2}deg)
+    `;
+
+
+    glass.style.transform = `
+        translateY(${move * 0.5}px)
+        rotate(${move * 2}deg)
+    `;
+
+});
+
+
+
+// ==========================
+// SCREEN 2 PEARLS
+// только скролл
+// ==========================
+
+const screen2 = document.querySelector('.second');
+
+const screen2Pearl1 = document.querySelector('.screen2-pearl1');
+const screen2Pearl2 = document.querySelector('.screen2-pearl2');
+const screen2Pearl3 = document.querySelector('.screen2-pearl3');
+
+
+if(screen2){
+
+
+window.addEventListener('scroll',()=>{
+
+
+const rect = screen2.getBoundingClientRect();
+
+
+let move = Math.max(0, -rect.top);
+
+
+
+if(screen2Pearl1){
+
+screen2Pearl1.style.transform =
+`
+translate(${move*0.15}px, ${move}px)
+rotate(${move*1}deg)
+`;
+
+}
+
+
+
+if(screen2Pearl2){
+
+screen2Pearl2.style.transform =
+`
+translate(${-move*0.12}px, ${move*1.2}px)
+rotate(${-move*5}deg)
+`;
+
+}
+
+
+
+if(screen2Pearl3){
+
+screen2Pearl3.style.transform =
+`
+translate(${move*0.3}px, ${move*0.8}px)
+rotate(${move*3}deg)
+`;
+
+}
+
+
+
+});
+
+
+}
+
+
+
+
+
+
+// ==========================
+// SCREEN 6 PEARL
+// медленно укатывается влево
+// ==========================
+
+const screen6 = document.querySelector('.screen6');
+const screen6Pearl = document.querySelector('.screen6-pearl');
+
+
+if(screen6 && screen6Pearl){
+
+window.addEventListener('scroll',()=>{
+
+
+const rect = screen6.getBoundingClientRect();
+
+
+let move = Math.max(0, -rect.top);
+
+
+// ограничиваем движение
+let roll = Math.max(0, Math.min(move - 350, 250));
+
+
+
+screen6Pearl.style.transform =
+`
+translateX(${-roll * 0.5}px)
+rotate(${roll * 3}deg)
+`;
+
+
+
+});
+
+
+}
+
+
+
+
+// ==========================
+// SCREEN 7 PEARL
+// медленно вправо + вниз
+// ==========================
+
+const screen7 = document.querySelector('.screen7');
+const screen7Pearl = document.querySelector('.screen7-pearl');
+
+
+if(screen7 && screen7Pearl){
+
+window.addEventListener('scroll',()=>{
+
+
+const rect = screen7.getBoundingClientRect();
+
+
+let move = Math.max(0, -rect.top);
+
+
+// задержка старта
+let roll = Math.max(0, move - 300);
+
+
+
+screen7Pearl.style.transform =
+`
+translate(${roll * 0.85}px, ${roll * 0.25}px)
+rotate(${roll * 2}deg)
+`;
+
+
+
+});
+
+}
+
+
+// ==========================
+// SCREEN 8 PEARLS
+// как первый слайд
+// ==========================
+
+const s8pearl1 = document.querySelector('.screen8-pearl1');
+const s8pearl2 = document.querySelector('.screen8-pearl2');
+const s8pearl3 = document.querySelector('.screen8-pearl3');
+
+
+const screen8 = document.querySelector('.screen8');
+
+
+if(screen8){
+
+window.addEventListener('scroll',()=>{
+
+
+let rect = screen8.getBoundingClientRect();
+
+let move = Math.max(0, -rect.top);
+
+
+
+if(s8pearl1){
+
+s8pearl1.style.transform =
+`
+translate(${move*1.8}px, ${move}px)
+rotate(${move*1}deg)
+`;
+
+}
+
+
+
+if(s8pearl2){
+
+s8pearl2.style.transform =
+`
+translate(${move*1.2}px, ${move*1}px)
+rotate(${-move*3}deg)
+`;
+
+}
+
+
+
+if(s8pearl3){
+
+s8pearl3.style.transform =
+`
+translate(${move*1}px, ${move*0.9}px)
+rotate(${move*1}deg)
+`;
+
+}
+
+
+
+});
+
+
+}
